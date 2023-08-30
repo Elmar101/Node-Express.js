@@ -1,26 +1,16 @@
 const express = require('express');
-const db = require('./db/db');
+const playersRouter = require('./routers/playersRoutes');
 
 // create server
 const server = express();
 
-server.get('/', (req, res)=>{
-  res.send("Hello from express");
-});
+server.use(express.json());
 
-server.get('/actors', (req, res)=>{
-  res.status(200).json(db);
-});
+// Requset Player Router we handle use with middleware
+server.use('/players', playersRouter);
 
-server.get('/actors/:id', (req, res)=>{
-  const { id } = req.params;
-  const actor = db.find(item=> item.id === parseInt(id));
-  if(actor) res.status(200).json(actor);
-  else res.status(404).send('Error 404');
-});
+server.get('/', (req, res)=>{ res.send("Hello from express")});
 
-server.listen(5000, ()=>{
-  console.log("http://localhost:5000 listening on this port");
-});
+server.listen(8080, ()=>{console.log("http://localhost:8080 listening on this port")});
 
 

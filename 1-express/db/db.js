@@ -1,12 +1,12 @@
 module.exports = [
   {
     id: 1,
-    name: 'Barcelona',
-    players: ['Messi', 'Neymar', 'Xavi','Inesta']
+    name: 'Messi',
+    group: ['Barselona', 'PSJ', 'Inter Mayami']
   },
   {
     id: 2,
-    name: 'Real',
-    players: ['Ronaldo', 'Modric', 'Alonso', 'Ramos']
+    name: 'Ronaldo',
+    group: ['Real', 'Juventus', 'Mancestir']
   }
 ]
