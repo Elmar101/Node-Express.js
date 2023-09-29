@@ -1,0 +1,20 @@
+{
+  "name": "3-node-udy-tr",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "joi": "17.9",
+    "mongoose": "^7.5.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0"
+  }
+}
